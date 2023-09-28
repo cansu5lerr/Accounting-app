@@ -20,8 +20,8 @@ const isWeekend = (date) => {
   return day === 0 || day === 6;
 };
 const formatAmountForDisplay = (text) => {
-  const milyonRegex = /(\d+) milyon/;
-  const binRegex = /(\d+) bin/;
+  const milyonRegex = /(\d+)m/;
+  const binRegex = /(\d+)k/;
   const tlRegex = /(\d+) TL/;
 
   const milyonMatch = text.match(milyonRegex);
