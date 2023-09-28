@@ -2,6 +2,9 @@
 
 The Personal Accounting Application is a tool for individuals to track their financial transactions, maintain records, and monitor their financial status.
 
+This application has been developed using Spring Boot, React and Docker technologies.
+
+
 ## Login Page
 ![Login Page](documentations/login.png)
 
