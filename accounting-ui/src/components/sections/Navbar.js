@@ -33,20 +33,6 @@ return (
             <i className="fa fa-bars"></i>
         </button>
 
-        {/*  <!-- Topbar Search --> */}
-        {/* <form
-            className="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div className="input-group">
-                <input type="text" className="form-control bg-light border-0 small" placeholder="Search for..."
-                    aria-label="Search" aria-describedby="basic-addon2" />
-                <div className="input-group-append">
-                    <button className="btn btn-primary" type="button">
-                        <i className="fas fa-search fa-sm"></i>
-                    </button>
-                </div>
-            </div>
-        </form> */}
-
         {/*  <!-- Topbar Navbar --> */}
         <ul className="navbar-nav ml-auto">
 
@@ -60,33 +46,14 @@ return (
                 <div className="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                     aria-labelledby="searchDropdown">
                     <form className="form-inline mr-auto w-100 navbar-search">
-                        {/* <div className="input-group">
-                            <input type="text" className="form-control bg-light border-0 small"
-                                placeholder="Search for..." aria-label="Search"
-                                aria-describedby="basic-addon2" />
-                            <div className="input-group-append">
-                                <button className="btn btn-primary" type="button">
-                                    <i className="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div> */}
+                  
                     </form>
                 </div>
             </li>
 
             {/*  <!-- Nav Item - Alerts --> */}
             <li className="nav-item dropdown no-arrow mx-1">
-                {/* <a className="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i className="fas fa-bell fa-fw"></i>
-                    <span className="badge badge-danger badge-counter"></span>
-                </a>
-                <div className="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                    aria-labelledby="alertsDropdown">
-                    <h3 className="dropdown-header">
-                    Duyurular
-                    </h3>           
-                </div> */}
+          
             </li>
 
             {/*  <!-- Nav Item - Messages --> */}
