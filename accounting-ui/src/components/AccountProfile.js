@@ -86,14 +86,7 @@ import {
           </Box>
         </CardContent>
         <Divider />
-        {/* <CardActions>
-          <Button
-            fullWidth
-            variant="text"
-          >
-            Upload picture
-          </Button>
-        </CardActions> */}
+  
       </Card>
     );
   };
