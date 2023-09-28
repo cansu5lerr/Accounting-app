@@ -55,7 +55,7 @@ public class FormatAmountService {
             BigDecimal thousands = amount.divide(new BigDecimal("1000"));
             BigDecimal hundreds = amount.remainder(new BigDecimal("1000"));
 
-            formattedAmount = decimalFormat.format(thousands.setScale(0, BigDecimal.ROUND_DOWN)) + " k " +
+            formattedAmount = decimalFormat.format(thousands.setScale(0, BigDecimal.ROUND_DOWN)) + "k " +
                     decimalFormat.format(hundreds.setScale(0,BigDecimal.ROUND_DOWN)) + " TL";
         } else {
             formattedAmount = decimalFormat.format(amount) + " TL";
