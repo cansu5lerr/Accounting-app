@@ -39,4 +39,4 @@ Users can efficiently manage their income, expenses, and investments with these 
 
 Users can use this page to update their personal information.
 
-This application provides a comprehensive tool for personal finance management. With a user-friendly interface and detailed data tracking features, it helps you better manage your financial situation.
+
