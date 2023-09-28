@@ -195,14 +195,7 @@ const Login = ({onLogin}) => {
             >
              Giriş Yap
             </Button>
-            {/* <Button
-              fullWidth
-              size="large"
-              sx={{ mt: 3 }}
-              onClick={handleSkip}
-            >
-              Kimlik doğrulamayı atla
-            </Button> */}
+ 
           </form>
         )}
         {method === 'phoneNumber' && (
