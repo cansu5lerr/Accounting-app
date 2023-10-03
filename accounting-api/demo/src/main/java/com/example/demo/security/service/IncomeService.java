@@ -50,25 +50,7 @@ public IncomeResponse addIncome(String token , IncomeRequest incomeRequest) {
 
 }
 
-//Kullanıcnın gelirlerini gösteren fonksiyon
-/*public List<IncomeResponse> showIncome(String token){
-        User authenticatedUser = userDetailsService.getAuthenticatedUserFromToken(token);
-        if(authenticatedUser != null) {
-    List<Income> userIncomes = incomeRepository.findByUser(authenticatedUser);
-            List<IncomeRequest> incomeRequests = userIncomes.stream()
-                    .map(income -> {
-                        IncomeRequest request = new IncomeRequest();
-                        request.setIncomeName(income.getIncomeName());
-                        request.setAmount(income.getAmount());
-                        request.setUserId(income.getUser().getId());
-                        request.setIncomeDate(income.getIncomeDate());
-                        return request;
-                    })
-                    .collect(Collectors.toList());
-            return showIncomeResponseList(incomeRequests);
-        }
-       return null;
-    } */
+
     public List<IncomeResponse> showIncome(String token){
         User authenticatedUser = userDetailsService.getAuthenticatedUserFromToken(token);
         if(authenticatedUser != null) {
@@ -174,29 +156,6 @@ public IncomeResponse deleteIncome(String token, long incomeId) {
     return null;
 }
 
-
-    /*  public UpdateIncomeResponse updateIncome(String token, long incomeId, IncomeRequest incomeRequest){
-        User authtenticatedUser= userDetailsService.getAuthenticatedUserFromToken(token);
-        if(authtenticatedUser != null) {
-            Income existingIncome = incomeRepository.findById(incomeId).orElse(null);
-
-            if (existingIncome != null && existingIncome.getUser().getId() == authtenticatedUser.getId()) {
-                existingIncome.setIncomeName(incomeRequest.getIncomeName());
-                existingIncome.setAmount(incomeRequest.getAmount());
-                existingIncome.setIncomeDate(incomeRequest.getIncomeDate());
-                //güncellenen income
-                incomeRepository.save(existingIncome);
-                UpdateIncomeResponse incomeResponse = new UpdateIncomeResponse();
-                incomeResponse.setIncomeName(existingIncome.getIncomeName());
-                incomeResponse.setAmount(existingIncome.getAmount());
-                incomeResponse.setId(existingIncome.getId());
-                incomeResponse.setDate(existingIncome.getIncomeDate());
-
-                return incomeResponse;
-            }
-        }
-        return null;
-    }*/
     public ResponseEntity<?> showListIncome (String token) {
     User authenticatedUser = userDetailsService.getAuthenticatedUserFromToken(token);
     Map<String, BigDecimal> monthlyIncomeMap = new HashMap<>(); //burada her ay için geliri hesaplayacaksın
