@@ -44,26 +44,7 @@ public class InvestmentService {
             investmentRepository.save(investment);
         }
         return showInvestmentResponse(investmentRequest);
-    }/*
-      public List<IncomeResponse> showIncome(String token){
-        User authenticatedUser = userDetailsService.getAuthenticatedUserFromToken(token);
-        if(authenticatedUser != null) {
-            List<Income> userIncomes = incomeRepository.findByUser(authenticatedUser);
-            List<IncomeResponse> incomeRequests = userIncomes.stream()
-                    .map(income -> {
-                      IncomeResponse request = new IncomeResponse();
-                        request.setIncomeName(income.getIncomeName());
-                        request.setAmount(formatAmountService.formatAmount(income.getAmount()));
-                        request.setUserId(income.getUser().getId());
-                        request.setIncomeDate(income.getIncomeDate());
-                        request.setId(income.getId());
-                        return request;
-                    })
-                    .collect(Collectors.toList());
-            return incomeRequests;
-        }
-        return null;
-    }*/
+    }
     public List<InvestmentResponse> showInvestment(String token) {
         User authenticatedUser = userDetailsService.getAuthenticatedUserFromToken(token);
         if(authenticatedUser !=null) {
@@ -81,25 +62,7 @@ public class InvestmentService {
         }
         return null;
     }
-    //Yatırımları listeleme
-    /*public List <InvestmentResponse> showInvestment(String token ){
-        User authenticatedUser = userDetailsService.getAuthenticatedUserFromToken(token);
-        if(authenticatedUser != null) {
-            List<Investment> userInvestment = investmentRepository.findByUser(authenticatedUser);
-            List<InvestmentRequest> investmentRequests = userInvestment.stream()
-                    .map(investment->{
-                        InvestmentRequest request = new InvestmentRequest();
-                        request.setInvestmentName(investment.getInvestmentName());
-                        request.setAmount(investment.getAmount());
-                        request.setInvestmentDate(investment.getInvestmentDate());
-                        request.setUserId(investment.getUser().getId());
 
-                        return request;
-                    }).collect(Collectors.toList());
-            return showInvestmentResponseList(investmentRequests);
-        }
-        return null;
-    } */
 
     //Liste şeklinde döndürüyoruz.
     public List <InvestmentResponse> showInvestmentResponseList(List<InvestmentRequest> investmentRequest){
@@ -171,22 +134,7 @@ public class InvestmentService {
         }
         return null;
     }
-   /* public ExpenseResponse deleteExpense (String token, long expenseId) {
-        User authenticatedUser= userDetailsService.getAuthenticatedUserFromToken(token);
-        if(authenticatedUser !=null) {
-            Expense existingExpense = expenseRepository.findById(expenseId).orElse(null);
-            if(existingExpense != null && existingExpense.getUser().getId() == authenticatedUser.getId()) {
-                expenseRepository.delete(existingExpense);
-                ExpenseResponse expenseResponse = new ExpenseResponse();
-                expenseResponse.setExpenseName(existingExpense.getExpenseName());
-                expenseResponse.setAmount(formatAmountService.formatAmount(existingExpense.getAmount()));
-                expenseResponse.setId(existingExpense.getId());
-                expenseResponse.setExpenseDate(existingExpense.getExpenseDate());
-                return expenseResponse;
-            }
-        }
-        return null;
-    }*/
+
     public InvestmentResponse deleteInvestment (String token, long investmentId) {
         User authenticatedUser= userDetailsService.getAuthenticatedUserFromToken(token);
         if(authenticatedUser != null) {
